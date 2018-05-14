@@ -4,12 +4,15 @@ class Particle {
   PVector acceleration;
   float lifespan;
   PImage img;
-  float radius = 4;  
+  float z = random(0, 20);
+  float radius = map(z, 0, 20, 1, 5);
   
-  Particle(PVector l) {
-    acceleration = new PVector(random(-0.05, 0.05), random(-0.05, 0.05));
+  Particle(PVector location) {
+    //float accVal = 0.1;
+    float accVal = map(z, 0, 20, 0.05,0.2);
+    acceleration = new PVector(random(-accVal, accVal), random(-accVal, accVal));
     velocity = new PVector(random(-2, 2), random(-2, 2));
-    position = l.copy();
+    position = location.copy();
     lifespan = 255.0;
   } 
   
@@ -25,7 +28,9 @@ class Particle {
   void update() {
     velocity.add(acceleration);
     position.add(velocity);
+    //lifespan -= 1.0;
     lifespan -= 1.0;
+    radius -=0.02;
     
     if (position.x > width-radius || position.x < radius) {
       velocity.x = -velocity.x;
