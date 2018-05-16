@@ -4,8 +4,11 @@ boolean recording = false;
 boolean start = false;
 
 void setup() {
-  size(1280, 720);
-  img = loadImage("spangled-cotina.jpg");
+  //size(1280, 720);
+  img = loadImage("pp.jpg");
+  //img.resize(325, 500);
+  size(640, 640);
+  surface.setResizable(true);
   background(0);
   smooth();
   ps = new ParticleSys(new PVector(width/2, height/2));
@@ -20,12 +23,15 @@ void draw() {
       start = true;
     }
   }
-  if (start) {
-    float x = random(width);
-    float y = random(height);
+  if (mousePressed == true) {
+    //float x = random(width);
+    //float y = random(height);
+    float x = mouseX;
+    float y = mouseY;
     ps.addParticle(new PVector(x, y));
-    ps.run();
+    //ps.run();
   }
+  ps.run();
   if (recording) {
     saveFrame("output/bird####.png");
   }

@@ -3,7 +3,7 @@ class ParticleSys {
   PVector origin;
   PImage img;
   int currentParticles = 0;
-  int maxParticles = 10000;
+  int maxParticles = 1000000;
   ParticleSys(PVector position) {
     origin = position.copy();
     particles = new ArrayList <Particle>();
@@ -16,8 +16,10 @@ class ParticleSys {
   
   void addParticle(PVector location) {
     if (currentParticles < maxParticles) {
+      for (int i = 0 ; i < 10 ; i++) {
       particles.add(new Particle(location));
       currentParticles++;
+      }
     }
   }
    
