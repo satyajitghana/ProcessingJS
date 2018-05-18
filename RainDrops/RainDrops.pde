@@ -5,7 +5,7 @@ Drop[] drops2 = new Drop[4000];
 Drop[] drops3 = new Drop[4000];
 void setup() {
   size(640, 640);
-  cat = loadImage("pp.jpg");
+  cat = loadImage("rp.jpeg");
   for (int i = 0 ; i < drops.length ; i++) {
     drops[i] = new Drop(cat);
     drops2[i] = new Drop(cat);

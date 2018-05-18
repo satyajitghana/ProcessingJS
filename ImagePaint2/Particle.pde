@@ -5,7 +5,7 @@ class Particle {
   float lifespan;
   PImage img;
   float z = random(0, 20);
-  float radius = map(z, 0, 20, 3, 6);
+  float radius = map(z, 0, 20, 1, 3);
   
   Particle(PVector location) {
     //float accVal = 0.1;
@@ -32,8 +32,10 @@ class Particle {
     //lifespan -= 1.0;
     lifespan -= 1.0;
     radius -=0.02;
-    if (radius < 0)
+    if (radius < 0) {
       radius = 0;
+      lifespan = -1;
+    }
     if (position.x > width-radius || position.x < radius) {
       velocity.x = -velocity.x;
     }

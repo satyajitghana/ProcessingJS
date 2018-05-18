@@ -5,10 +5,10 @@ boolean start = false;
 
 void setup() {
   //size(1280, 720);
-  img = loadImage("pp.jpg");
+  img = loadImage("spangled-cotina.jpg");
   //img.resize(325, 500);
-  size(640, 640);
-  surface.setResizable(true);
+  size(1280, 720);
+  //surface.setResizable(true);
   background(0);
   smooth();
   ps = new ParticleSys(new PVector(width/2, height/2));

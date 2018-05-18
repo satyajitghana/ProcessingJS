@@ -2,7 +2,7 @@ PImage cat;
 
 void setup() {
 	size(1280, 720);
-  cat = loadImage("ss.jpg");
+  cat = loadImage("spangled-cotina.jpg");
   background(0);
   smooth();
 }

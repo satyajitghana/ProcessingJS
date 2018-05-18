@@ -1,8 +1,8 @@
 class Drop {
   float x = random(width);
-  float y = random(-1000, 500);
+  float y = random(-500, 500);
   float z = random(0, 20);
-  float size = map(z, 0, 20, 2, 10);
+  float size = map(z, 0, 20, 8, 12);
   float yspeed = map(z, 0, 20, 1, 3);
   color c;
   PImage img;
