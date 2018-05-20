@@ -4,9 +4,9 @@ class Particle {
   //PVector vel = new PVector(random(-0.3, 0.3), random(-0.3, 0.3));
   PVector vel = new PVector(0, 0);
   PVector acc = new PVector(0, 0);
-  float size = random(2);
+  float size = random(3);
   float lifetime = random(255);
-
+  float velLimit = 3;
   Particle(PVector pos) {
     this.pos = pos;
   }
@@ -30,7 +30,7 @@ class Particle {
     vel.add(acc);
     prev = pos.copy();
     pos.add(vel);
-    vel.limit(3);
+    vel.limit(velLimit);
     acc.mult(0);
     lifetime--;
   }

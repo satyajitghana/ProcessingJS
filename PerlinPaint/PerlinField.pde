@@ -3,6 +3,7 @@ class PerlinField {
   int scale = 40;
   PVector flowField[];
   int rows, cols;  
+  float forceMag = 3;
   
   PerlinField(int numberOfParticles) {
     particles = new ArrayList <Particle>();
@@ -29,7 +30,7 @@ class PerlinField {
         int index = y * cols + x;
         float angle = noise(xoff, yoff, zoff) * TWO_PI * 2;
         PVector v = PVector.fromAngle(angle);
-        v.setMag(3);
+        v.setMag(forceMag);
         flowField[index] = v;
         xoff += inc;
       }

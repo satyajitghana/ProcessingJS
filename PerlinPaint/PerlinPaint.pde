@@ -4,7 +4,7 @@ PGraphics mouse;
 void setup() {
   size(640, 640);
   background(255);
-  pField = new PerlinField(1000);
+  pField = new PerlinField(100);
   img = loadImage("pp.jpg");
   mouse = createGraphics(640, 640);
 }
