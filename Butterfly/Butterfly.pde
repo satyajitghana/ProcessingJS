@@ -59,6 +59,6 @@ void draw() {
   canvas.background(68, 217, 230);
   canvas.textSize(20);
   canvas.fill(0, 121, 191);
-  canvas.text("Prachi Poddar", 420, 550);
+  canvas.text("Satyajit Ghana", 420, 550);
   canvas.endDraw();
 }
