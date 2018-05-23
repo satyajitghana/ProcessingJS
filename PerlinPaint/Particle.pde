@@ -1,3 +1,5 @@
+/* @pjs preload="pp.jpg"; */
+
 class Particle {
   PVector pos = new PVector(0, 0);
   PVector prev = new PVector(0, 0);
@@ -5,8 +7,9 @@ class Particle {
   PVector vel = new PVector(0, 0);
   PVector acc = new PVector(0, 0);
   float size = random(3);
-  float lifetime = random(255);
-  float velLimit = 3;
+  float lifetime = random(500);
+  float velLimit = 2;
+  
   Particle(PVector pos) {
     this.pos = pos;
   }
@@ -19,16 +22,21 @@ class Particle {
     //noStroke();
     //fill(200, 0, 100, lifetime);
     color c = img.get(int(pos.x), int(pos.y));
+    //stroke(c, lifetime);
+    //line(prev.x, prev.y, pos.x, pos.y);
     //fill(c, lifetime);
     //ellipse(pos.x, pos.y, size, size);
-    stroke(c, lifetime);
-    line(prev.x, prev.y, pos.x, pos.y);
+    float alpha = map(lifetime, 0, 500, 0, 200);
+    perlinDraw.stroke(c, alpha);
+    perlinDraw.line(prev.x, prev.y, pos.x, pos.y);
   }
 
   void update() {
     //acc = new PVector(random(-0.01, 0.01), random(-0.01, 0.01));
     vel.add(acc);
-    prev = pos.copy();
+    //prev = pos.copy();
+    prev.x = pos.x;
+    prev.y = pos.y;
     pos.add(vel);
     vel.limit(velLimit);
     acc.mult(0);

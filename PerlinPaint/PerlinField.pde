@@ -1,9 +1,11 @@
+/* @pjs preload="pp.jpg"; */
+
 class PerlinField {
   ArrayList <Particle> particles;
   int scale = 40;
   PVector flowField[];
   int rows, cols;  
-  float forceMag = 3;
+  float forceMag = 1;
   
   PerlinField(int numberOfParticles) {
     particles = new ArrayList <Particle>();
@@ -11,7 +13,7 @@ class PerlinField {
     for (int i = 0 ; i < numberOfParticles ; i++) particles.add(new Particle(new PVector(random(width), random(height))));
     cols = floor(width/scale) + 1;
     rows = floor(height/scale) + 1;
-    println(rows, ' ', cols, '\n');
+    //println(rows, ' ', cols, '\n');
     flowField = new PVector[rows * cols];
     //println(flowField.length);
     for (int i = 0 ; i < flowField.length ; i++) {
@@ -66,6 +68,7 @@ class PerlinField {
 
       if (particles.get(i).isDead()) {
         particles.remove(i);
+        //particles.get(i).lifetime = 255;
         // If dead don't add that particle
         particles.add(new Particle(new PVector(random(width), random(height))));
       }
