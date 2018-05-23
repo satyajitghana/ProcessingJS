@@ -18,7 +18,7 @@ class Pendulum {
     position.x = pivot.x + threadLength * sin(theta);
     position.y = pivot.y + threadLength * cos(theta);
     line(pivot.x, pivot.y, position.x, position.y);
-    println('[',pivot.x, pivot.y, position.x, position.y, ']');
+    //println('[',pivot.x, pivot.y, position.x, position.y, ']');
     fill(0);
     ellipse(position.x, position.y, 16, 16);
   }

@@ -1,3 +1,5 @@
+/* @pjs preload="spangled-cotina.jpg"*/
+
 PImage img;
 ParticleSys ps;
 boolean recording = false;

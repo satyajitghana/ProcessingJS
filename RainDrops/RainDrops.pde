@@ -1,3 +1,5 @@
+/* @pjs preload="rp.jpeg" */
+
 PImage cat;
 
 Drop[] drops = new Drop[4000];

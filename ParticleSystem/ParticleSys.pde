@@ -3,7 +3,7 @@ class ParticleSys {
   PVector origin;
   
   ParticleSys(PVector position) {
-    origin = position.copy();
+    origin = new PVector(position.x, position.y);
     particles = new ArrayList <Particle>();
     
   }

@@ -1,7 +1,7 @@
 Pendulum pendulum1;
 Pendulum pendulum2;
 
-float g = 1.8;
+float g = 1;
 
 float prevX = -1;
 float prevY = -1;
@@ -23,8 +23,8 @@ void setup() {
   pendulum2 = new Pendulum();
   pendulum1.theta = PI/2;
   pendulum2.theta = PI/2;
-  pendulum1.m = 20;
-  pendulum2.m = 30;
+  pendulum1.m = 15;
+  pendulum2.m = 20;
   colorMode(HSB);
   canvas = createGraphics(800, 800);
   canvas.beginDraw();

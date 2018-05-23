@@ -5,7 +5,7 @@ class ParticleSys {
   int currentParticles = 0;
   int maxParticles = 1000000;
   ParticleSys(PVector position) {
-    origin = position.copy();
+    origin = new PVector(position.x, position.y);
     particles = new ArrayList <Particle>();
     
   }

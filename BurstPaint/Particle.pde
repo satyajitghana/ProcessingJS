@@ -12,7 +12,7 @@ class Particle {
     float accVal = map(z, 0, 20, 0.02,0.05);
     acceleration = new PVector(random(-accVal, accVal), random(-accVal, accVal));
     velocity = new PVector(random(-2, 2), random(-2, 2));
-    position = location.copy();
+    position = new PVector(location.x, location.y);
     //lifespan = 255.0;
     lifespan = 255.0;
   } 

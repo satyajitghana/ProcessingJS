@@ -1,3 +1,5 @@
+/* @pjs preload="Tareefan-Veere-Di-Wedding.mp3" */
+
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 
@@ -68,5 +70,5 @@ void draw() {
   //pos += vel;
   //if (pos > (width/2-340)) vel = -1;
   //if (pos < -width/2) vel = 1;
-  saveFrame("output/img####.png");
+  //saveFrame("output/img####.png");
 }

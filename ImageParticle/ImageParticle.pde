@@ -1,3 +1,5 @@
+/* @pjs preload=spangled-cotina.jpg*/
+
 PImage cat;
 
 void setup() {

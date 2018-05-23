@@ -3,13 +3,20 @@ class Particle {
   //PVector vel = new PVector(random(-0.3, 0.3), random(-0.3, 0.3));
   PVector vel = new PVector(0, 0);
   PVector acc = new PVector(0, 0);
-  PVector prev = pos.copy();
+  PVector prev = new PVector(pos.x, pos.y);
   float maxVel = 2;
+  
+  /*Particle() {
+    prev.x = pos.x;
+    prev.y = pos.y;
+  }*/
   
   void update() {
     vel.add(acc);
     vel.limit(maxVel);
-    prev = pos.copy();
+    //prev = pos.copy();
+    prev.x = pos.x;
+    prev.y = pos.y;
     pos.add(vel);
     acc.mult(0);
     //acc = new PVector(0, 0);
