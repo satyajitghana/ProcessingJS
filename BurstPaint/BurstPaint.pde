@@ -9,7 +9,7 @@ void setup() {
   //size(1280, 720);
   img = loadImage("spangled-cotina.jpg");
   //img.resize(325, 500);
-  size(1280, 720);
+  size(1280, 720, P2D);
   //surface.setResizable(true);
   background(0);
   smooth();
