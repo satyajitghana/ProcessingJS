@@ -6,6 +6,10 @@ Hi, I'm shadowleaf, and in this repository you'll find all the Processing code f
 
 [PerlinPaint](PerlinPaint/)
 
+### Lissajous Curve Table
+
+[LissajousCurveTable](LissajousCurveTable/)
+
 ### Burst Paint
 
 [BurstPaint](BurstPaint/)
