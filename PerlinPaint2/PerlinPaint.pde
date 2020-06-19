@@ -6,9 +6,9 @@ PGraphics mouse;
 PGraphics perlinDraw;
 
 void setup() {
-  size(640, 640);
-  background(255);
   img = loadImage("pp.jpg");
+  size(img.width, img.height);
+  background(255);
   pField = new PerlinField(1000);
   //mouse = createGraphics(640, 640);
   perlinDraw = createGraphics(img.width, img.height);
