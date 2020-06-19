@@ -6,7 +6,7 @@ class Particle {
   //PVector vel = new PVector(random(-0.3, 0.3), random(-0.3, 0.3));
   PVector vel = new PVector(0, 0);
   PVector acc = new PVector(0, 0);
-  float size = random(3);
+  float size = random(5);
   float lifetime = random(500);
   float velLimit = 2;
   
